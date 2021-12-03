@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 """
 --- Day 1: Sonar Sweep ---
 
@@ -33,16 +35,33 @@ ocean current or a fish or something.
 To do this, count the number of times a depth measurement increases from the previous measurement.
 """
 
-#!/usr/bin/env python3
 
-solver = open('nums.txt').readlines() #Open file and read in lines
-count = 0 #Set counter to 0
-last_num = solver[0] #Set previous number
-for num in solver[1:]: #Loop in numbers after first number
-	if num > last_num: #If the number is Greater than last 
-		count += 1 #Increase count by 1
-	last_num = num  #Reset previous last number
-ans = int(count + 1) #Add one for last index
-answer = str(ans) #Change to string
-print(f"{answer} larger measurements...")
+def partOne():
+	solver = open('nums.txt').readlines() #Open file and read in lines
+	count = 0 #Set counter to 0
+	last_num = solver[0] #Set previous number
+	for num in solver[1:]: #Loop in numbers after first number
+		if num > last_num: #If the number is Greater than last 
+			count += 1 #Increase count by 1
+		last_num = num  #Reset previous last number
+	ans = int(count + 1) #Add one for last index
+	answer = str(ans) #Change to string
 
+	#return count
+	print(f"{count} larger measurements...")
+
+
+def partTwo():
+	solver = open('nums.txt').readlines()
+	count = 0
+	for num in range(len(solver)-3):
+		slide_one = int(solver[num]) + int(solver[num+1]) + int(solver[num+2])
+		slide_two = int(solver[num+1]) + int(solver[num+2]) + int(solver[num+3])
+		if slide_two > slide_one:
+			count += 1
+
+	#return count
+	print(f"{count} sums are larger...")
+
+partOne()
+partTwo()
