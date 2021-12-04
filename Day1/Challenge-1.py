@@ -48,7 +48,7 @@ def partOne():
 	answer = str(ans) #Change to string
 
 	#return count
-	print(f"{count} larger measurements...")
+	print(f"{answer} larger measurements...")
 
 
 def partTwo():
