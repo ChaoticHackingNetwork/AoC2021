@@ -35,7 +35,6 @@ After following these instructions, you would have a horizontal position of 15 a
 """
 
 
-Movements = [str, int]
 depth = 0
 horz_pos = 0
 
