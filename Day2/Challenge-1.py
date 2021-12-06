@@ -34,7 +34,6 @@ Your horizontal position and depth both start at 0. The steps above would then m
 After following these instructions, you would have a horizontal position of 15 and a depth of 10.
 """
 
-
 depth = 0
 horz_pos = 0
 
